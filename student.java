@@ -5,19 +5,23 @@ class student1{
     static String name;
     static Float marks1,marks2,marks3;
     public void enterDetails(int rollno,String name, float marks1,float marks2,float marks3){
-
-    }
-}
-
-class newstudent extends student1{
-    static float total, avg;
-    public void enterDetails(int rollno,String name, float marks1,float marks2,float marks3){
         student1.rollno = rollno;
         student1.name = name;
         student1.marks1 = marks1;
         student1.marks2 = marks2;
         student1.marks3 = marks3;
     }
+}
+
+class newstudent extends student1{
+    static float total, avg;
+    // public void enterDetails(int rollno,String name, float marks1,float marks2,float marks3){
+    //     student1.rollno = rollno;
+    //     student1.name = name;
+    //     student1.marks1 = marks1;
+    //     student1.marks2 = marks2;
+    //     student1.marks3 = marks3;
+    // }
     public void calculate(){
         total = marks1+marks2+marks3;
         avg = total/3;
