@@ -36,14 +36,13 @@ public class loop{
     //     }
     // }
 
-    // public static void threemultiples(int n){
-    //     int j,sum=0,mul=3;
-    //     for(j=1;j<n;j+=3){
-    //         mul = mul*j;
-    //         sum = sum+mul;
-    //     }
-    //     System.out.println("sum = "+sum);
-    // }
+    public static void threemultiples(int n){
+        int j,sum=0;
+        for(j=1;j<n;j++){
+            sum = sum+3*j;
+        }
+        System.out.println("sum = "+sum);
+    }
 
     public static void main(String[] args){
         int num,num2;
@@ -55,6 +54,6 @@ public class loop{
         // even(num);
         // odd(num,num2);
         // table(num);
-        // threemultiples(num);
+        threemultiples(num);
     }
 }
