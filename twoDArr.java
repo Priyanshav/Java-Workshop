@@ -11,6 +11,7 @@ public class twoDArr{
         int arr2[][] = new int[m][n];
         int arr3[][] = new int[m][n];
         int arr4[][] = new int[m][n];
+        int arr5[][] = new int[m][n];
         System.out.println("Enter the elements of 1st matrix");
         for(int i=0;i<m;i++){
             for(int j=0;j<n;j++){
@@ -49,16 +50,35 @@ public class twoDArr{
             }
             System.out.println(" ");
         }
-        // System.out.println("Sum of other than Diagonal is: ");
-        // for(int i=0;i<m;i++){
-        //     for(int j=0;j<n;j++){
-        //         if(i != j)
-        //         System.out.print(arr4[i][j]+ " ");
-        //         else{
-        //             arr4[i][j] = 0;
-        //         }
-        //     }
-        //     System.out.println(" ");
-        // }
+        for(int i=0;i<m;i++){
+            for(int j=0;j<n;j++){
+                if(i!=j)
+                arr4[i][j] = arr1[i][j] + arr2[i][j];
+                // else if(i+j != m-1)                   // only central element is left with 0 value
+                // arr4[i][j] = arr1[i][j] + arr2[i][j];
+            }
+        }
+        System.out.println("Sum of other than diagonal is: ");
+        for(int i=0;i<m;i++){
+            for(int j=0;j<n;j++){
+                System.out.print(arr4[i][j]+ " ");
+            }
+            System.out.println(" ");
+        }
+        for(int i=0;i<m;i++){
+            for(int j=0;j<n;j++){
+                if(i==j)
+                arr5[i][j] = arr1[i][j] + arr2[i][j];
+                if(i+j == m-1)
+                arr5[i][j] = arr1[i][j] + arr2[i][j];
+            }
+        }
+        System.out.println("Sum of only diagonal is: ");
+        for(int i=0;i<m;i++){
+            for(int j=0;j<n;j++){
+                System.out.print(arr5[i][j]+ " ");
+            }
+            System.out.println(" ");
+        }
     }
 }
